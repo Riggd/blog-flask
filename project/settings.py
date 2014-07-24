@@ -21,3 +21,16 @@ FREEZER_REMOVE_EXTRA_FILES = False # Setting to True will delete
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite']
 FLATPAGES_ROOT = os.path.join(APP_DIR, 'pages')
 FLATPAGES_EXTENSION = '.md'
+
+'''
+HOW TO FREEZE AND UPLOAD SITE
+
+$ python freeze.py
+$ git init
+$ git add . --all
+$ git commit -am "Initial commit"
+$ git checkout -b gh-pages
+$ git remote add origin https://github.com/username/flask-ghpages-example.git
+$ git push origin --all
+
+'''

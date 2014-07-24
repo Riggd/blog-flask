@@ -1,1 +1,1 @@
-alert('Javascript is working!');
+// Insert all Javascript files here.

@@ -2,7 +2,7 @@
 <html>
     <head>
       <meta charset="utf-8">
-      <title>{% block page_title %}Your Site{% endblock %}</title>
+      <title>{% block page_title %} Home {% endblock %} | Derek Onay</title>
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
       {% block css %}{% endblock %}
 
@@ -11,8 +11,11 @@
 
     <nav class="nav-menu">
         <ul>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="https://github.com/sloria/flask-ghpages-example">Source</a></li>
+            <li><a href="{{ url_for('home') }}">About</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li><a href="{{ url_for('travels') }}">Travels</a></li>
+            <li><a href="{{ url_for('blog') }}">Thoughts</a></li>
+            <li><a href="https://github.com/riggd/blog-flask">Source</a></li>
         </ul>
     </nav>
 

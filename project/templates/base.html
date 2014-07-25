@@ -2,12 +2,16 @@
 <html>
     <head>
       <meta charset="utf-8">
-      <title>{% block page_title %} Home {% endblock %} | Derek Onay</title>
+      <title>{% block page_title %} Home {% endblock %} | Derek Onay</title>      
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.min.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+      <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,300italic,300,100,700' rel='stylesheet' type='text/css'>
       {% block css %}{% endblock %}
 
     </head>
-    <body class="box">
+    <body>
 
     <nav class="nav-menu">
         <ul>
@@ -27,5 +31,10 @@
 
     </div><!-- end container -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
     </body>
 </html>

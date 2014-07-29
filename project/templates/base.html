@@ -12,24 +12,32 @@
 
     </head>
     <body>
+    <div class="{% block content_class %}wrapper{% endblock content_class %}">
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="{{ url_for('home') }}">About</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('travels') }}">Travels</a></li>
+                <li><a href="{{ url_for('blog') }}">Thoughts</a></li>
+                <li><a href="https://github.com/riggd/blog-flask">Source</a></li>
+            </ul>
+        </nav>
 
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="{{ url_for('home') }}">About</a></li>
-            <li><a href="{{ url_for('projects') }}">Projects</a></li>
-            <li><a href="{{ url_for('travels') }}">Travels</a></li>
-            <li><a href="{{ url_for('blog') }}">Thoughts</a></li>
-            <li><a href="https://github.com/riggd/blog-flask">Source</a></li>
-        </ul>
-    </nav>
-
-    <div class="{% block content_class %}container{% endblock content_class %}">
+    
 
       <div class="content" role="main">
-        {% block content %}{% endblock %}
+        {% block content %}  {% endblock %}
       </div>
 
+        
+        <footer id="footer" class="footer">
+            made with <i class="fa fa-heart-o"></i> & <i class="fa fa-flask"></i> | All rights Reserved.
+        </footer>
     </div><!-- end container -->
+    
+    
+    
+    
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
     <script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script>
